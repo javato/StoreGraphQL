@@ -1,4 +1,4 @@
-package launcher;
+package org.jroldan.store.launcher;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

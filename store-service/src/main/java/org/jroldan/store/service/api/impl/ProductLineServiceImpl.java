@@ -43,12 +43,6 @@ public class ProductLineServiceImpl implements ProductLineService{
 	}
 
 	@Override
-	public void validate(ProductLine entity) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public void delete(ProductLine entity) {
 		// TODO Auto-generated method stub
 		

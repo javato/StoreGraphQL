@@ -42,12 +42,6 @@ public class ProductServiceImpl implements ProductService{
 	}
 
 	@Override
-	public void validate(Product entity) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public void delete(Product entity) {
 		// TODO Auto-generated method stub
 		

@@ -42,12 +42,6 @@ public class OrderServiceImpl implements OrderService{
 	}
 
 	@Override
-	public void validate(Order entity) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public void delete(Order entity) {
 		// TODO Auto-generated method stub
 		

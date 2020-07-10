@@ -42,12 +42,6 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public void validate(User entity) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public void delete(User entity) {
 		// TODO Auto-generated method stub
 		

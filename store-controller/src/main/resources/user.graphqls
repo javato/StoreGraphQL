@@ -3,6 +3,18 @@ extend type Query{
 	getAllUsers: [User]
 }
 
+extend type Mutation{
+	saveUser(user: UserInput): User
+	deleteUser(id : Long!): Boolean
+}
+
+input UserInput{
+	idUser: Long,
+	name: String,
+	email: String,
+	password: String
+}
+
 type User{
 	idUser: Long,
 	name: String,

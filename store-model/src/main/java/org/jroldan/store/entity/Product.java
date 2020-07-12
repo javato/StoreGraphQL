@@ -24,9 +24,9 @@ public class Product {
 	private Long stock;
 	
 	@Column
-	private BigDecimal price;
+	private BigDecimal price;	
 	
-	
+
 
 	public Long getIdProduct() {
 		return idProduct;

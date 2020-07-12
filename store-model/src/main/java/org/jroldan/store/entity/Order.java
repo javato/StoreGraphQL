@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -15,26 +16,20 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "ORDER")
+@Table(name = "ORDERS")
 public class Order {
 	@Id
 	@Column(name = "id_order")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idOrder;
 	
-	@OneToMany(
-	        mappedBy = "order",
-	        cascade = CascadeType.ALL,
-	        orphanRemoval = true
-	 )
-	private List<ProductLine> productLines = new ArrayList<ProductLine>();;
+	@OneToMany(mappedBy="id.idOrder", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	private List<ProductLine> productLines = new ArrayList<ProductLine>();
 	
 	@ManyToOne
 	@JoinColumn(name="id_user")
 	private User user;
 	
-	
-
 	public Long getIdOrder() {
 		return idOrder;
 	}	

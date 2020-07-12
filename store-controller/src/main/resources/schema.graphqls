@@ -1,10 +1,5 @@
-type Product{
-	idProduct: Long,
-	name: String,
-	stock: BigDecimal,
-	price: BigDecimal
+schema{
+	query:Query
 }
 
-type Query{
-	getProduct(idProduct: Long!): Product
-}
+type Query{}

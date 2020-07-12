@@ -1,0 +1,11 @@
+extend type Query{
+	getUser(idUser: Long!): User
+	getAllUsers: [User]
+}
+
+type User{
+	idUser: Long,
+	name: String,
+	email: String,
+	password: String
+}

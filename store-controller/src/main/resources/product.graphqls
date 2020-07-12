@@ -1,0 +1,11 @@
+extend type Query{
+	getProduct(idProduct: Long!): Product
+	getAllProducts: [Product]
+}
+
+type Product{
+	idProduct: Long,
+	name: String,
+	stock: BigDecimal,
+	price: BigDecimal
+}

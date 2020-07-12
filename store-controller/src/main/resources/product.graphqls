@@ -10,15 +10,15 @@ extend type Mutation{
 }
 
 type Product{
-	idProduct: Long,
-	name: String,
-	stock: Long,
+	idProduct: Long
+	name: String
+	stock: Long
 	price: BigDecimal
 }
 
 input ProductInput{
-	idProduct: Long,
-	name: String,
-	stock: Long,
+	idProduct: Long
+	name: String
+	stock: Long
 	price: BigDecimal
 }

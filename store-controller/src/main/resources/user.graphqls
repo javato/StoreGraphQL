@@ -21,3 +21,10 @@ type User{
 	email: String,
 	password: String
 }
+
+input UserInput{
+	idUser: Long,
+	name: String,
+	email: String,
+	password: String
+}

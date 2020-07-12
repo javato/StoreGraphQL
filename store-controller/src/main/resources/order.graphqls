@@ -3,6 +3,28 @@ extend type Query{
 	getAllOrders: [Order]
 }
 
+extend type Mutation{
+	newOrder(order: OrderInput): Order
+}
+
 type Order{
 	idOrder: Long
+	productLines: [ProductLine]
+	user: User
+}
+
+type ProductLine{
+	product: Product
+	quantity: Long
+}
+
+input ProductLineInput{
+	product: ProductInput
+	quantity: Long
+}
+
+input OrderInput{
+	idOrder: Long
+	productLines: [ProductLineInput]
+	user: UserInput
 }

@@ -23,7 +23,7 @@ public class Order {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idOrder;
 	
-	@OneToMany(mappedBy="id.idOrder", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@OneToMany(mappedBy="id.idOrder", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	private List<ProductLine> productLines = new ArrayList<ProductLine>();
 	
 	@ManyToOne

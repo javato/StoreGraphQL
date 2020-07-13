@@ -15,20 +15,33 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
+
 @Entity
 @Table(name = "ORDERS")
 public class Order {
+
 	@Id
 	@Column(name = "id_order")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idOrder;
 	
 	@OneToMany(mappedBy="id.idOrder", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	@Fetch(FetchMode.SUBSELECT)
 	private List<ProductLine> productLines = new ArrayList<ProductLine>();
 	
 	@ManyToOne
 	@JoinColumn(name="id_user")
 	private User user;
+	
+	public Order() {
+		
+	}
+	
+	public Order(Long idOrder) {
+		this.idOrder = idOrder;
+	}
 	
 	public Long getIdOrder() {
 		return idOrder;

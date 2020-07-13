@@ -1,6 +1,7 @@
 extend type Query{
 	getOrder(idOrder: Long!): Order
 	getAllOrders: [Order]
+	getOrdersByUser(user: UserInput): [Order]
 }
 
 extend type Mutation{

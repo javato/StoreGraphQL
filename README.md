@@ -52,7 +52,7 @@ docker pull dozze/store-springboot-jroldan:onlyjre
 And then run it:
 
 ```bash
-docker run --name store-springboot-jroldan -p 8080:8080 store-springboot-jroldan:onlyjre
+docker run --name store-springboot-jroldan -p 8080:8080 dozze/store-springboot-jroldan:onlyjre
 ```
 
 ## GraphQL API

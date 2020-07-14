@@ -1,0 +1,404 @@
+{
+	"info": {
+		"_postman_id": "55015960-6a84-48fa-a24d-4868dd9b147c",
+		"name": "StoreAssignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. CRUD for managing users",
+			"item": [
+				{
+					"name": "CREATE saveUser()",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation{\r\n  saveUser(user: {\r\n    name: \"New Name\"\r\n    email: \"New Email\"\r\n    password:\"New Password\"\r\n  }) {\r\n    idUser\r\n    name\r\n    email\r\n    password\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "READ getUser()",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query{\r\n  getUser(idUser: 5) {\r\n    idUser\r\n    name\r\n    email\r\n    password\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "READ getAllUsers()",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query{\r\n  getAllUsers{\r\n    idUser\r\n    name\r\n    email\r\n    password\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE saveUser()",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation{\r\n  saveUser(user: {\r\n    idUser: 8\r\n    name: \"Updated Name\"\r\n    email: \"New Email\"\r\n    password:\"New Password\"\r\n  }) {\r\n    idUser\r\n    name\r\n    email\r\n    password\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE deleteUser()",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation{\r\n  deleteUser(id: 7)\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "2. CRUD for managing products",
+			"item": [
+				{
+					"name": "CREATE saveProduct()",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation{\r\n  saveProduct(product: {\r\n    name: \"New Product\"\r\n    stock: 100\r\n    price: 25.99    \r\n  }) {\r\n    idProduct\r\n    name\r\n    stock\r\n    price\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "READ getProduct()",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query{\r\n  getProduct(idProduct: 5) {\r\n    idProduct\r\n    name\r\n    stock\r\n    price\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "READ getAllProducts()",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query{\r\n  getAllProducts{\r\n    idProduct\r\n    name\r\n    stock\r\n    price\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE saveProduct()",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation{\r\n  saveProduct(product: {\r\n    idProduct: 7\r\n    name: \"Updated Product\"\r\n    stock: 100\r\n    price: 25.99    \r\n  }) {\r\n    idProduct\r\n    name\r\n    stock\r\n    price\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE updateStock()",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation{\r\n  updateStock(idProduct: 5, stock: 100) {\r\n    idProduct\r\n    name\r\n    stock\r\n    price\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE deleteProduct()",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation{\r\n  deleteProduct(idProduct: 12)\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "3. POST for managing order",
+			"item": [
+				{
+					"name": "CREATE newOrder()",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation {\r\n  newOrder(order :{\r\n    productLines: [\r\n      {\r\n        quantity: 1\r\n        product:{\r\n          idProduct: 4\r\n        }\r\n      }\r\n      {\r\n        quantity: 2\r\n        product: {\r\n          idProduct: 5\r\n        }\r\n      }\r\n    ]\r\n    user:{\r\n      idUser: 5\r\n    }\r\n  }) {\r\n    idOrder\r\n    productLines{\r\n      product{\r\n        idProduct\r\n        name\r\n        stock\r\n        price\r\n      }\r\n      quantity\r\n    }\r\n    user{\r\n      idUser\r\n      name\r\n      email\r\n    }\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "4. GET all orders given a customer",
+			"item": [
+				{
+					"name": "READ getOrdersByUser()",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query{\r\n  getOrdersByUser(user: {idUser: 1}) {\r\n    idOrder\r\n    productLines{\r\n      product{\r\n        idProduct\r\n        name\r\n        stock\r\n        price\r\n      }\r\n    }\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "5. GET all products given an order",
+			"item": [
+				{
+					"name": "READ getOrder()",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query{\r\n  findProductsByIdOrder(idOrder: 1) {\r\n    idProduct\r\n    name\r\n    stock\r\n    price\r\n  }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/graphql",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

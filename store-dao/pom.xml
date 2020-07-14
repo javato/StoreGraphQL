@@ -6,6 +6,8 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>store-dao</artifactId>
+  <name>store-dao</name>
+  <packaging>jar</packaging>
   <dependencies>
   	<dependency>
   		<groupId>org.jroldan</groupId>

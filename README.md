@@ -71,6 +71,10 @@ Our main schema file is `schema.graphqls`, and it is extended by:
 
 ## GraphQL requests
 
+### Postman collection
+Collection file of requests to import in Postman: `StoreAssignment.postman_collection.json`
+
+
 ### 1. CRUD for managing Users
 
 - Create User

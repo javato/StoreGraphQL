@@ -22,4 +22,8 @@ public class ProductQuery implements GraphQLQueryResolver{
 	public List<Product> getAllProducts() {
 		return productService.findAll();
 	}
+	
+	public List<Product> findProductsByIdOrder(Long idOrder){
+		return productService.findProductsByIdOrder(idOrder);
+	}
 }
